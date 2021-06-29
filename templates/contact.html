@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block common %}
+        <div class="container my-3">
+            <h2 class="text-center h2">
+                Corona Virus Probability Detector
+            </h2>
+            <div class="container">
+                <div class="title-desc my-3">
+                    <h1 class="display-5 my-3 text-center font-color-white">
+                        <strong>Contact Us</strong>
+                    </h1>
+                </div>
+                <form style="font-size: 1.3rem;" action="javascript:sendMail()" method="POST">
+                    <div class="mb-3 my-3">
+                        <label class="form-label desc notes" for="nameBox">
+                            Name:
+                        </label>
+                        <input aria-describedby="emailHelp" class="form-control" id="nameBox" name="name" type="text">
+                        </input>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label desc notes" for="emailBox">
+                            E-Mail:
+                        </label>
+                        <input class="form-control" id="emailBox" name="email" type="email">
+                            <div class="form-text desc notes" id="emailHelp" style="font-size: 1.1rem;color: black;">
+                                We'll never
+                    share your email with
+                    anyone else.
+                            </div>
+                        </input>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label desc notes" for="msgBox">
+                            Message:
+                        </label>
+                        <input class="form-control" id="msgBox" name="message" type="text">
+                        </input>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-lg" id="subBtn" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        </script>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
+        <script>
+            function sendMail() {
+        var name = $('#nameBox').val();
+        var email = $('#emailBox').val();
+        var msg = $('#msgBox').val();
+        var body = 'Name: ' + name + '<br />E-Mail: ' + email + '<br />Message: ' + msg;
+        // console.log(body)
+
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "yourcodinghub.py@gmail.com",
+            Password: "cayphgzpntjjbmmg",
+            Port: 587,
+            // SSL: Required,
+            To: 'yourcodinghub.py@gmail.com',
+            From: "prameyamohanty14@gmail.com",
+            Subject: "NLP Camp Project [Contact from: " + name + "]",
+            Body: body
+        }).then(
+            message => {
+                if (message == 'OK') {
+                    alert("You form has been submitted succesfully!");
+                    location.reload()
+                }
+                else {
+                    console.error(message);
+                    alert("An error occurred while submitting your form");
+                    location.reload()
+                }
+            }
+        );
+    }
+        </script>
+{% endblock %}  

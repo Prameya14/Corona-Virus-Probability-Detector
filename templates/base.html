@@ -1,0 +1,184 @@
+<!DOCTYPE doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+    <title>
+        Corona Virus Probability Detector
+    </title>
+    <link href="{{ url_for('static', filename='logo.png') }}" rel="shortcut icon" type="image/jpg" />
+    </link>
+    </meta>
+    </meta>
+</head>
+<style type="text/css">
+    body {
+        background: linear-gradient(rgb(90, 160, 221), rgb(165, 205, 240));
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" id="main-title" style="padding-left: 0.5rem;">
+                Virus Prob Detector
+            </a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" style="padding-right: 0;">
+
+                    <li class="nav-item navbar-brand dropdown">
+                        <a aria-expanded="false" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                            href="#" id="navbarDropdown" role="button">
+                            Virus Stats
+                        </a>
+                        <ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item navbar-brand" style="color: black;">
+                                    <strong>
+                                        Updated On:<br> {{update_time}} 08:00 AM IST
+                                    </strong>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item navbar-brand" style="color: black;">
+                                    {{vac}}
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item navbar-brand" style="color: black;">
+                                    {{active}}
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item navbar-brand" style="color: black;">
+                                    {{discharged}}
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                                <a class="dropdown-item navbar-brand" style="color: black;">
+                                    {{death}}
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item navbar-brand">
+                        <a aria-current="page" class="nav-link active" href="/">
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-brand">
+                        <a class="nav-link active" href="/about">
+                            About Detector
+                        </a>
+                    </li>
+                    <li class="nav-item navbar-brand">
+                        <a class="nav-link active" href="/contact">
+                            Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+        .marquee {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.6rem;
+            height: auto;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 10px;
+            padding-left: 10px;
+            border-radius: 6px;
+            background-color: rgb(30, 158, 218);
+            border: 2px solid #343a40;
+            margin-top: 6px;
+            margin-left: 6px;
+            margin-right: 6px;
+            font-weight: bold;
+        }
+        .precautions {
+            font-weight: 1.4rem;
+        }
+    </style>
+
+    <div class="marquee h5">
+        <marquee scrolldelay="1">
+            <span class="title">
+                Stay Safe by Following these Precautions:- &nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <span class="precautions">
+                &rarr; Clean your hands often. Use soap and water, or an alcohol-based hand rub
+            </span>
+            <span class="precautions">
+                &rarr; Maintain a safe distance from anyone who is coughing or sneezing.
+            </span>
+            <span class="precautions">
+                &rarr; Wear a mask when physical distancing is not possible.
+            </span>
+            <span class="precautions">
+                &rarr; Don’t touch your eyes, nose or mouth.
+            </span>
+            <span class="precautions">
+                &rarr; If you have a fever, cough and difficulty breathing, seek medical attention.
+            </span>
+            <span>#STAY HOME #STAY SAFE</span>
+        </marquee>
+    </div>
+
+    {% block common %}
+
+    {% endblock common %}
+
+    <hr>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2 class="card-title">
+                    Android App
+                </h2>
+            </div>
+            <div class="card-body text-center">
+                <p class="card-text h3">
+                    To download our Android App Click On the button given below!
+                </p>
+                <span class="h4 text-danger">Note: This app is free of virus. You can allow your settings to download
+                    the .apk file without any hesitation.</span><br><br>
+                <a href="/static/app.apk" class="btn btn-primary navbar-brand">
+                    Download
+                </a>
+            </div>
+        </div>
+    </div><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</link>
+</body>
+
+</html>

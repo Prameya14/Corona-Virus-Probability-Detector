@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block common %}
+        <div class="container my-3">
+            <h2 class="text-center h2">
+                Corona Virus Probability Detector
+            </h2>
+            <div class="alert alert-dark h3" role="alert">
+                Patient's Percentage of Infection: {{prob}}%
+            </div>
+            {% if prob < 50 %}
+            <div class="alert alert-success h3" role="alert">
+                Status: Infection Level is Low.
+            </div>
+            {% endif %}
+            {% if prob == 50 %}
+            <div class="alert alert-warning h3" role="alert">
+                Status: Infection Level is Moderate.
+            </div>
+            {% endif %}
+            {% if prob > 50 %}
+            <div class="alert alert-danger h3" role="alert">
+                Status: Infection Level is High!
+            </div>
+            {% endif %}
+            <h3 class="h3 my-3">
+                Thank for using our probability detector. STAY HOME! STAY SAFE!
+            </h3>
+            <a href="/">
+                <button class="btn btn-success my-2 navbar-brand">
+                    Check Again
+                </button>
+            </a>
+        </div>
+{% endblock %}       

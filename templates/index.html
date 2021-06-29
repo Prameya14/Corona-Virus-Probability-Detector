@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block common %}
+
+<div class="container my-3">
+    <h2 class="text-center h2">
+        Corona Virus Probability Detector
+    </h2>
+    <form action="/" method="POST" style="font-size: 1.3rem;">
+        <div class="form-group">
+            <label for="fever">
+                Enter Fever Value
+            </label>
+            <input class="form-control" id="fever" name="fever" placeholder="Fever Value:" type="number">
+            </input>
+        </div>
+        <div class="form-group">
+            <label for="age">
+                Enter Age
+            </label>
+            <input class="form-control" id="age" name="age" placeholder="Age:" type="number">
+            </input>
+        </div>
+        <div class="form-group">
+            <label for="form-label">
+                Body Pain
+            </label>
+            <select class="form-control form-select" id="pain" name="pain">
+                <option value="0">
+                    No Pain
+                </option>
+                <option value="1">
+                    Severe Pain
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="form-label">
+                Runny Nose
+            </label>
+            <select class="form-control form-select" id="runnyNose" name="runnyNose">
+                <option value="1">
+                    Yes
+                </option>
+                <option value="0">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="form-label">
+            <label for="diffBreath">
+                Difficulty in Breathing
+            </label>
+            <select class="form-control form-select" id="diffBreath" name="diffBreath">
+                <option value="-1">
+                    No Difficulty
+                </option>
+                <option value="0">
+                    Little Difficulty
+                </option>
+                <option value="1">
+                    Severe Difficulty
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="form-label">
+                Are you vaccinated?
+            </label>
+            <select class="form-control form-select" id="vacStat" name="vacStat">
+                <option value="1">
+                    Yes
+                </option>
+                <option value="0">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="d-grid gap-2 my-4 text-center">
+            <button class="btn btn-success" type="submit" style="font-size: 1.3rem !important; width: 50%; margin: auto;">
+                Submit
+            </button>
+        </div>
+    </form>
+</div>
+
+{% endblock common %}

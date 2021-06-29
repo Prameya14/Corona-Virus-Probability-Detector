@@ -1,0 +1,45 @@
+Name: Prameya Mohanty
+School: Delhi Public School
+Class: 8
+Title: Corona Virus Probability Detector
+Domains: Data and Natural Language Processing
+Summary: This is an AI enabled project which detects the percentage of infection in our body due to Corona Virus.
+Context:
+    Problem:
+    As we know that the growing cases of Corona Virus have affected our day-to-day life a lot. Many of us have lost our jobs, many have lost their dearer and neared ones and many more are stilling suffering from this virus. We have already faced to Waves of this Virus, but now we need to be extremenly serious to stop the third wave. The most commonly heard problem in this pandemic is shortage of Medical Resources. Where the cases are increasing day by day we are just falling short of the required resources. To stop this, I am providing my Idea and Solution to this Problem.
+
+
+    Idea:
+    The idea of my project is that a set of doctors should sit and discuss about the mostly seen symptoms of this Virus such as Loss of Taste, Smell, Body Pain, Sneezing, Coughing etc. They should make a complete data set by testing the symptoms of those people who have been tested COVID Positive and Negative. After that we can work on that data and create a ML Model for better predictions. Then according to that prediction we should provide the resources to the people. For example who has been surveyed a high percentage of infection, should be provided with the required resources first.
+
+    Note: This model is not ready to use. It is based on random data. It needs to be trained using actual data.
+
+
+    Solution:
+    I have actually made a Website and an Android App which is kind of a form that the people need to fill for themselves to be clarified that they require being hospitalised or not so that the right person can get the right resources and on time. The data I am using is completely random but for this model to be used we need to get actual data which will be provided by a set of healthcare specialists.
+How does it work?: This model is trained on the Logistic Regression Algorithm of a Python Library called Scikit Learn. The model is trained with Random Data generated using MS Excel and stored in an CSV File. Then the model predicts according to the inputs of the user.
+
+
+Problem:
+The growing cases of Corona Virus have affected our day-to-day life a lot. Many of us have lost our jobs, many have lost their dearer and neared ones and many more are stilling suffering from this virus. We have already faced to Waves of this Virus, but now we need to be extremenly serious to stop the third wave. The most commonly heard problem in this pandemic is shortage of Medical Resources. Where the cases are increasing day by day we are just short of the required resources. Everyday people are losing their lives due to shortage of resources like Beds, Ventilators, ICUs etc. Many those who actually don't did these are getting, but their are many who actually need these but they are not getting. To stop this, I am providing my Idea and Solution to this Problem.
+
+Idea:
+The idea of my project is that a set of doctors should sit and discuss about the mostly seen symptoms of this Virus such as Loss of Taste, Smell, Body Pain, Sneezing, Coughing etc. They should make a complete data set by testing the symptoms of those people who have been tested COVID Positive and Negative. After that we can work on that data and create a ML Model for better predictions. Then according to that prediction we should provided the resources to the person. For example who has been surveyed a high chance of being positive should be provided with the required resources.
+
+Note: This model is not ready to use. It is just a random data based model.
+
+Solution:
+I have actually made a Website which is kind of a form which the people need to fill for themselves to be clarified that they require being hospitalised or not so that the right people can get the right resources and on time. The data I am using is complete random data but for this model to be used we need to get actual data which we will be provided with by a set of healthcare specialists.
+
+ML Model Parameters:
+A team of doctors can sit down to find out the best model parameters.
+
+Randoms Featured Used:
+Fever 
+Body Pain
+Age Discrete
+Runny Nose
+Breathing Problem
+
+Labels:
+Probability of being affected by COVID-19
